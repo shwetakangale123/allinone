@@ -1,0 +1,31 @@
+<h1 style="background-color: skyBlue;"> <b style="color: red;"> Service work</b></h1>
+
+<!-- <p><b> used to separate UI from Back-end</b></p> -->
+
+<!-- <p><b>also used for backend communication</b></p> -->
+
+
+<table class="table table-info">
+    <tr>
+        <th style="color: BLUE;"><b>User Id</b></th>
+        <th style="color: blue;"><b>Title</b></th>
+        <th style="color: blue;"><b>Body</b></th>
+        <!-- <th style="color: blue;"><b> products</b></th> -->
+    </tr>
+    <tr *ngFor="let x of postData">
+        <td>{{x.userId}}</td>
+        <td>{{x.title}}</td>
+        <td>{{x.body}}</td>
+        <!-- <td>{{x.yor}}</td> -->
+
+    </tr>
+
+<!-- 
+    <tr *ngFor="let x of productData">
+        <td>{{x.yor}}</td>
+
+    </tr> -->
+
+
+    
+</table>

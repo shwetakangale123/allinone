@@ -1,0 +1,89 @@
+<h1>Directive</h1>
+
+<h2>structural directives</h2>
+
+<p>There are three types of structural directives i.e *ngIf, *ngFor,*ngswitch</p>
+
+<!-- // [1] For ngIf -->
+<div>
+    <p *ngIf ="(age > 18) || showData">Your age is {{age}} and this is greater than 18 </p>
+
+</div>
+
+<!-- For [2]*ngFor -->
+
+<select>
+    <option *ngFor ="let nm of stud">{{nm}}</option>
+</select>
+    
+
+<!-- For [3] *ngswitch -->
+
+<h3>This is *ngSwitch structural Directive</h3>
+
+<div [ngSwitch]="num">
+<div *ngSwitchCase ="1"> one </div>
+<div *ngSwitchCase ="2"> Two </div>
+<div *ngSwitchCase ="3">Three </div>    
+<div *ngSwitchCase ="4"> Four </div>
+<div *ngSwitchCase ="5"> five </div>
+<div *ngSwitchDefault>This is default case</div>
+</div>
+
+
+<br><br><br>
+
+
+<h4>Attribute Directives</h4>
+<h5>ngClass Attribute Directive</h5>
+
+<p class="testclass"> This is normal class</p>
+
+<p [ngClass]="testclass1">This is attribute directive ngClass</p>
+
+<div [ngClass]="showData ? 'test1': 'test2'">
+    <p>This is an attribute directive with conditional CSS</p>
+</div>
+
+
+<h5>ngStyle Attribute Directive</h5>
+
+<div style="color:brown">
+    This is normal style
+</div>
+
+ <div [ngClass]="{'color':'yellow' , 'font-size': '20px'}">
+    <p>This is an ngStyle</p>
+</div> 
+
+
+<div [ngStyle]="myStyle">
+    <p>This is an style from ts with the help of ngStyle</p>
+</div>
+
+<div [ngStyle]="showData ? myStyle: myStyle1">
+    <p>This is conditionally an style from ts with the help of ngStyle</p>
+</div> 
+
+<br> <br>
+
+<h3 style="color: blue;"><b> For Custom Directive</b></h3>
+
+<div appCustDirective>
+
+    <p> <b>This is 1st try on custome-directive with Directive html file</b></p>
+
+</div>
+
+<div appCustDirective>
+
+    <!-- <p><b> This is 2nd try on custome-directive with html file</b></p> -->
+
+</div>
+
+
+<div appCustDirective>
+
+<!-- <p><b>This is 3rd try on custome-directive with html file</b></p> -->
+
+</div>

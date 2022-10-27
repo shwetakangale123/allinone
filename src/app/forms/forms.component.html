@@ -1,0 +1,84 @@
+<style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+<form [formGroup]="reg" #frm="ngForm">
+    <div class="form-group">
+        <label> FirstName:</label>
+        <input type="text" name="" formControlName="fname" class="form-control">
+    </div> 
+
+    <div class="form-group">
+        <label> lastName:</label>
+        <input type="text" name="" formControlName="lname" class="form-control">
+    </div> 
+
+    <div class="form-group">
+        <label> Age:</label>
+        <input type="text" name="" formControlName="age" class="form-control">
+    </div> 
+
+    <div class="form-group">
+        <label> DOB:</label>
+        <input type="text" name="" formControlName="DOB" class="form-control">
+    </div> 
+
+
+
+    <div class="form-group">
+        <label> education</label>
+        <input type="text" name="" formControlName="education" class="form-control">
+    </div> 
+
+    <div class="form-group">
+        <label> course</label>
+        <input type="text" name="" formControlName="course" class="form-control">
+
+        <select name="course" id="" class="form-control">
+            <option *ngFor="let x of course">{{x}}</option>
+        </select>
+        
+    </div> 
+
+    <br> <br>
+
+    <button class="btn btn-info" *ngIf="submitButton"(click)="onSubmitForm(frm)">Submit</button>
+    <button class="btn btn-warning" *ngIf="showButton"(click)="onUpdateTemp(frm)">Update</button>
+
+    
+
+</form>
+
+<br><br><br> 
+
+<div class="class1">
+    <table class="table table-primary">
+        <tr style="border: 1px solid black;">
+            <th>First Name:</th>
+            <th>Last Name:</th>
+            <th>Age:</th>
+            <th>DOB:</th>
+            <th>education:</th>
+            <th>course:</th>
+
+        </tr>
+
+        <tr *ngFor="let i of student">
+            <td>{{i.fname}}</td>
+            <td>{{i.lname}}</td>
+            <td [ngStyle]="'i.age > 20' ?{'color':'red'}:{'color':'yellow'}">{{i.age}}</td>
+            <td>{{i.DOB}}</td>
+            <td>{{i.education}}</td>
+            <td>{{i.course}}</td>
+
+            <td> <button class="btn btn denger" (click)="onDelete(i)">Delete</button></td>
+            <td> <button  (click)="onEdit(i)"> Edit</button></td>
+    
+
+        </tr>
+    </table>
+</div>
+
+

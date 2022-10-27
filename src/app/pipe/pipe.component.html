@@ -1,0 +1,92 @@
+<h2 style="color: red;"><b>!!Angular Pipe!!</b></h2>
+
+<h3> Original Text: {{sampleText}} </h3>
+
+<h3> Uppercase Text: {{sampleText | uppercase}} </h3>
+
+<h3> Lowercase Text: {{sampleText | lowercase}}</h3>
+
+<h3> Title Case Text: {{sampleText | titlecase}}</h3> 
+
+<h3> Courses Name: {{courses | titlecase}}</h3>
+
+<br>
+
+<h3 style="color: blue;">Date Pipe</h3>
+
+
+<h3>Original Date: {{date1}}</h3>
+<!-- // I get original formate of date -->
+
+
+<h3> Standered Formate :{{date1 | date}} </h3>
+<!-- I get here only standerd date -->
+
+<h3> Short Date: {{date1 | date: 'short'}}</h3>
+<!-- I get here Short date and time only -->
+
+<h3> Medium Date: {{date1 | date: 'medium'}}</h3>
+<!-- I get here date with time 9:47:00 like that -->
+
+<h3> dd/mm/yyyy: {{date1 | date:'dd/mm/yyyy'}} </h3>
+
+
+<br>
+
+<h3 style="color: blue;">JSON Pipe</h3>
+
+<p>JSON Pipe: {{data | json}}</p>
+ <!-- we get that data which will include in our array this is nothing but backEnd data 
+    nd this backEnd data in only in the Array formate we get on browse -->
+
+<br>
+
+<h3 style="color: blue;">Slice Pipe</h3>
+
+<h4> Original Text: {{ sampleText }}</h4>
+
+<h4>Slice Text: {{sampleText | slice:2 }}</h4>
+<!-- here 1st two letters will be cut  -->
+
+<h4> Slice Text: {{sampleText | slice:1:4}}</h4>
+<!-- // here count in the index form i.e (4-1) -->
+
+<h4> Slice Text: {{courses | slice:0:3}} </h4>
+<!-- i.e (3-1)courses name  will print  -->
+
+<br> <br>
+
+
+<h3 style="color: blue;">Currency Pipe</h3>
+
+<h4>Original Text: {{salary}} </h4>
+
+<h4> Original Text:{{salary | currency}} </h4>
+<!-- here we get currency by default we get doller currency front of sallery -->
+
+<h4> Currency Text: {{ salary | currency:'INR' }} </h4>
+<!--  here convert that 1lakh into Indian currency ,i.e conversion of one formate to another formate -->
+
+<h4> Currency Text: {{salary | currency:'USD'}}</h4>
+<!-- USD Means Doller that 1lakh converts into doller -->
+
+<br><br>
+
+<h3 style="color: blue;"> Multiple Pipes</h3>
+
+<h3>Multiple Pipes: {{sampleText | slice : 0:5 | uppercase }}</h3>
+<!-- here print 0-4 letters with uppercase -->
+
+<h3> Multiple Pipes: {{ sampleText | slice : 0:2 | lowercase }}</h3>
+
+<!-- here we can use multiple pipe with same interpolation -->
+
+<br><br>
+
+<h3 style="color: blue;">Custom Pipe</h3>       
+
+<!-- <p> Original Text: {{sampleText | cust:5}}</p> -->
+
+<!-- <p>Original Text: {{salary | cust :100:25:45}}</p> -->
+
+<p> Name: {{name | cust}}</p>

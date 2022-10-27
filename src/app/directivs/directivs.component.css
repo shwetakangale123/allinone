@@ -1,0 +1,17 @@
+.testclass{
+    color: red;
+}
+
+.test1{
+    color: blueviolet;
+}
+
+
+.test2{
+    color: brown;
+}
+
+
+
+
+/* test1 and test2 mentioned externally in css file of directive */
